@@ -7,6 +7,7 @@
   "icon": "icon.png",
   "homepage_url": "https://gabrielbohrerdora-collab.github.io/hp-plugin-owlbear/",
   "action": {
+    "title": "HP Bar",
     "type": "open_page",
     "url": "index.html"
   }
