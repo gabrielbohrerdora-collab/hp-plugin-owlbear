@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* MENU DO GM */
+#menu {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #111;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  width: 200px;
+  z-index: 10;
+}
+
+#menu label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+#menu input {
+  width: 100%;
+}
+
+/* OVERLAY GERAL */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* HP BAR */
+.hp-box {
+  position: absolute;
+  width: 64px;
+  pointer-events: none;
+}
+
+.hp-frame {
+  width: 100%;
+}
+
+.hp-bar {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  height: 6px;
+  background: green;
+  transition: width 0.2s;
+}
+
+/* STATUS */
+.status {
+  position: absolute;
+  top: -18px;
+  left: 16px;
+  width: 32px;
+}
+
+/* DANO */
+.hit {
+  animation: hitAnim 0.3s steps(3);
+}
+
+@keyframes hitAnim {
+  0% { content: url("assets/hit1.png"); }
+  33% { content: url("assets/hit2.png"); }
+  66% { content: url("assets/hit3.png"); }
+}
+
+/* CURA */
+.greenFlash {
+  animation: flash 0.4s;
+}
+
+@keyframes flash {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(2) saturate(2); }
+  100% { filter: brightness(1); }
+}
+
+.heal {
+  position: absolute;
+  animation: healUp 1s forwards;
+}
+
+@keyframes healUp {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-20px); }
+}
